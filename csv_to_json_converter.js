@@ -61,7 +61,12 @@ const writeFiles = (content, fileName) => {
 			fileContent.rows.push(row);
 		}
 
-		writeFile(dir, fileName, JSON.stringify(fileContent, " ", 2), "json");
+		writeFile(
+			dir,
+			fileName,
+			JSON.stringify(fileContent.rows, " ", 2),
+			"json"
+		);
 	} catch (err) {
 		console.error(err);
 	}
